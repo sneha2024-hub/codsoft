@@ -24,6 +24,9 @@ def main():
 
     try:
         length = int(input("Enter the desired password length: "))
+        if length < 1:
+            raise ValueError("Password length must be at least 1.")
+
         use_uppercase = input("Include uppercase letters? (y/n): ").lower() == 'y'
         use_lowercase = input("Include lowercase letters? (y/n): ").lower() == 'y'
         use_digits = input("Include digits? (y/n): ").lower() == 'y'
